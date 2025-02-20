@@ -1,0 +1,11 @@
+package pirates;
+
+public class Personnage {
+	
+	private int nbPV;
+	private int nbPopularite;
+	
+	
+	public int getPopularite() {
+		return nbPopularite;
+}

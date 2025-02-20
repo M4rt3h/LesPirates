@@ -1,0 +1,33 @@
+package pirates;
+
+public class Personnage {
+	
+	private int nbPV;
+	private int nbPopularite;
+	private Carte[] main = new Carte[4];
+
+	
+	
+	public int getPopularite() {
+		return nbPopularite;
+	}
+	public int getPV() {
+		return nbPV;	
+	}
+	
+	public Carte getCarteJoueur(int numeroCarte) {
+		return main[numeroCarte];
+	}
+	
+	
+	//String retour = str1.concat(str2);
+	
+	public String donnerCarte() { //Retourne les propriétés de la carte sous la forme d'un String
+		String retour="";
+		
+		System.out.println(result);
+		return result;
+	}
+	
+//	public Carte[] donnerMain
+}

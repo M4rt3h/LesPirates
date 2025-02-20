@@ -1,0 +1,7 @@
+package pirates;
+
+public class Carte {
+	protected String nom;
+	public abstract String decrireCarte();
+
+}

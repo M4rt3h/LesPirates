@@ -1,0 +1,47 @@
+package pirates;
+import java.util.Scanner;
+
+public class Affichage {
+	
+	public String afficherAcceuil() {
+		return "Bienvenue sur le jeu\n";
+	}
+	
+	public String demanderNomJoueur(int numJoueur) {
+		return "Quel est le nom du joueur " + String.valueOf(numJoueur) + " ?\n";
+	}
+	
+
+	
+	public static void main(String[] args) {
+		String[] joueurs = new String[2]; //Pour stocker les nom de joueurs
+        Scanner scanner = new Scanner(System.in);
+    	
+
+		Affichage affichage = new Affichage();
+		System.out.println(affichage.afficherAcceuil());
+		
+		System.out.println(affichage.demanderNomJoueur(1));
+        joueurs[0] = scanner.nextLine(); // Lecture de l'entrée utilisateur + stockage
+        System.out.println("Le joueur 1 s'appelle : " + joueurs[0] + "\n");
+        
+		System.out.println(affichage.demanderNomJoueur(2));
+        joueurs[1] = scanner.nextLine(); // Lecture de l'entrée utilisateur + stockage
+        System.out.println("Le joueur 2 s'appelle : " + joueurs[1] + "\n");
+       
+        boolean joueurPerdu = false;
+        int PV_J1 = 5; //PointsVie du joueur 1
+        int PP_J1 = 0; //PointsPopularite joueur 1
+        int PV_J2 = 5; //PointsVie du joueur 2
+        int PP_J2 = 0; //PointsPopularite joueur 2
+
+        while (!joueurPerdu) {
+        	joueurPerdu = (PV_J1 == 0) || (PV_J2 == 0) || (PP_J1 == 5) || (PP_J2 == 5);
+
+        }
+        
+		
+        scanner.close(); //fermer le scanner
+	}
+
+}

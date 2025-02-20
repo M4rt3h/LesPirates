@@ -1,0 +1,22 @@
+package pirates;
+
+public class Affichage {
+	
+	public String afficherAcceuil() {
+		return "Bienvenue sur le jeu\n";
+	}
+	
+	public String demanderNomJoueur(int numJoueur) {
+		return "Quel est le nom du joueur " + String.valueOf(numJoueur) + " ?\n";
+	}
+
+	public static void main(String[] args) {
+		Affichage affichage = new Affichage();
+		System.out.println(affichage.afficherAcceuil());
+		System.out.println(affichage.demanderNomJoueur(1));
+		
+		
+
+	}
+
+}

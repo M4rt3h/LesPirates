@@ -1,0 +1,78 @@
+package pirates;
+
+import java.util.Scanner;
+
+public class Affichage {
+	Scanner scanner = new Scanner(System.in);
+
+	public String afficherAcceuil() {
+		return "Bienvenue sur le jeu\n";
+	}
+
+	public String demanderNomJoueur(int numJoueur) {
+		System.out.println("Quel est le nom du joueur " + String.valueOf(numJoueur) + " ?\n");
+		String nomJoueur = scanner.nextLine();
+		return nomJoueur;
+	}
+	
+	public int debuterTour(String nomJoueur, String[] main) {
+		System.out.println("C'est au tour de " + nomJoueur + " de jouer !");
+		System.out.println("Voici ta main :");
+		for (int k=0; k<5; k++) {
+			System.out.println("Carte n°"+(k+1)+" : "+main[k]+"\n");
+		}
+		System.out.println("Qu'est ce que tu choisis de faire ? \n(Renseigne le numero de la carte à utiliser)");
+		boolean valide = false;
+		int choix = -1;
+		while (!valide) {
+			// Vérifier si l'entrée est un entier
+			if (scanner.hasNextInt()) {
+				choix = scanner.nextInt();
+
+				// Vérifier si l'entier est entre 1 et 5
+				if (choix >= 1 && choix <= 5) {
+					valide = true; // Si c'est valide, sortir de la boucle
+				} else {
+					System.out.println("Ce n'est pas un nombre entre 1 et 5. Essayez encore.");
+				}
+			} else {
+				// Si l'entrée n'est pas un entier
+				System.out.println("Ce n'est pas un entier valide. Essayez encore.");
+				scanner.next(); // Consommer l'entrée invalide
+			}
+		}
+		return choix-1;
+	}
+
+	public static void main(String[] args) {
+		String[] joueurs = new String[2]; // Pour stocker les nom de joueurs
+		Scanner scanner = new Scanner(System.in);
+
+		Affichage affichage = new Affichage();
+		affichage.afficherAcceuil();
+		joueurs[0] = affichage.demanderNomJoueur(1);
+		joueurs[1] = affichage.demanderNomJoueur(2);
+
+		String[] laMain1 = new String[5]; // Pour stocker les cartes du joueur 1
+		String[] laMain2 = new String[5]; // Pour stocker les cartes du joueur 2
+
+		for (int k = 0; k < 5; k++) { // ajout des cartes aux mains de chaque joueurs
+			laMain1[k] = "carteJ1 " + k;
+			laMain2[k] = "carteJ2 " + k;
+		}
+
+		//boolean joueurPerdu = false;
+		//int PV_J1 = 5; // PointsVie du joueur 1
+		//int PP_J1 = 0; // PointsPopularite joueur 1
+		//int PV_J2 = 5; // PointsVie du joueur 2
+		//int PP_J2 = 0; // PointsPopularite joueur 2
+		//int indiceJoueur = 0; // %2 pour connaitre qui joue
+		//int choix = affichage.debuterTour(joueurs[0], laMain1);
+		
+
+		// changer de joueur
+
+		scanner.close(); // fermer le scanner
+	}
+
+}

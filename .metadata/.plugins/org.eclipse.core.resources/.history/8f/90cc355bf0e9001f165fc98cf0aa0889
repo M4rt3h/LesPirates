@@ -1,0 +1,10 @@
+package pirates;
+
+public abstract class Carte {
+	
+	private String nomCarte;
+	
+	protected String nom;
+	public abstract String decrireCarte();
+
+}

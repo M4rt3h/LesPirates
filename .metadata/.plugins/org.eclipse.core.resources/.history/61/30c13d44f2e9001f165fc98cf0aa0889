@@ -1,0 +1,19 @@
+package pirates;
+
+public class Affichage {
+	
+	public String afficherAcceuil() {
+		return "Bienvenue sur le jeu";
+	}
+	
+	public String demanderNomJoueur() {
+		return "Quel est le nom de votre personnage";
+	}
+
+	public static void main(String[] args) {
+		Affichage affichage = new Affichage();
+		System.out.println(affichage.afficherAcceuil());
+
+	}
+
+}

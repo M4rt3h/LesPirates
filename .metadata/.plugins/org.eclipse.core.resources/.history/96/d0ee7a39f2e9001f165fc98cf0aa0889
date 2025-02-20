@@ -1,0 +1,15 @@
+package pirates;
+
+public class Affichage {
+	
+	public String afficherAcceuil() {
+		return "Bienvenue sur le jeu";
+	}
+
+	public static void main(String[] args) {
+		Affichage affichage = new Affichage();
+		System.out.println(affichage.afficherAcceuil());
+
+	}
+
+}

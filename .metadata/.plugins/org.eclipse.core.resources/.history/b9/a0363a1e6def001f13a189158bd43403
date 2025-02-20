@@ -1,0 +1,36 @@
+package pirates;
+
+public class Personnage {
+	
+	private int nbPV;
+	private int nbPopularite;
+	private Carte[] main = new Carte[4];
+
+	
+	
+	public int getPopularite() {
+		return nbPopularite;
+	}
+	public int getPV() {
+		return nbPV;	
+	}
+	
+	public Carte getCarteJoueur(int numeroCarte) {
+		return main[numeroCarte];
+	}
+	
+	
+	//String retour = str1.concat(str2);
+	
+	public String donnerCarte(int indice) { //Retourne les propriétés de la carte sous la forme d'un String
+		String retour; //la variable locale où tout sera stocké avant le retour
+		String type; //var locale stocke type carte
+		String nom; //var locale avec nom carte
+		//String 
+		
+		
+		return retour;
+	}
+	
+//	public Carte[] donnerMain
+}

@@ -1,0 +1,37 @@
+package pirates;
+import java.util.Scanner;
+
+public class Affichage {
+	
+	public String afficherAcceuil() {
+		return "Bienvenue sur le jeu\n";
+	}
+	
+	public String demanderNomJoueur(int numJoueur) {
+		return String.valueOf(numJoueur);
+	}
+	
+	public void afficherCarte(String descriptionCarte) {
+		System.out.println(descriptionCarte);
+	}
+	
+	public static void main(String[] args) {
+		String[] joueurs = new String[2]; //Pour stocker dans l'afficheur le nom des joueurs
+        Scanner scanner = new Scanner(System.in);
+		Affichage affichage = new Affichage();
+		joueur[0] affichage.afficherAcceuil());
+		System.out.println(affichage.demanderNomJoueur(1));
+        String nomJoueur1 = scanner.nextLine(); // Lecture de l'entrée utilisateur
+        System.out.println("Le joueur 1 s'appelle : " + nomJoueur1 + "\n");
+		System.out.println(affichage.demanderNomJoueur(2));
+        String nomJoueur2 = scanner.nextLine(); // Lecture de l'entrée utilisateur
+        System.out.println("Le joueur 2 s'appelle : " + nomJoueur2 + "\n");
+        System.out.println(affichage.afficherCarte("test"));
+        scanner.close(); //fermer le scanner
+
+        
+		
+
+	}
+
+}
