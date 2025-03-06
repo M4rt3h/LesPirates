@@ -1,0 +1,17 @@
+package pirates;
+
+public class CarteVolerCarte extends Carte {
+
+	public CarteVolerCarte() {
+		
+	}
+	
+	
+	
+	@Override
+	public String carteToString() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

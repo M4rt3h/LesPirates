@@ -1,0 +1,35 @@
+package pirates;
+
+public class Personnage {
+
+	private String nom;
+	private int nbPV;
+	private int nbPopularite;
+	private Carte[] laMain = new Carte[4];
+
+	public int getPopularite() {
+		return nbPopularite;
+	}
+
+	public int getPV() {
+		return nbPV;
+	}
+
+	public String getNom() {
+		return nom;
+	}
+
+	public Carte getCarteJoueur(int numeroCarte) {
+		return laMain[numeroCarte];
+	}
+
+	// String retour = str1.concat(str2);
+
+	public String donnerMain() {
+		for (int i = 0; i < 4; i++) {
+			laMain[i].carteToString()
+		}
+		return null;
+
+	}
+}

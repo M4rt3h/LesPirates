@@ -1,0 +1,12 @@
+package pirates;
+
+public class MainDeFer extends CarteAttaque {
+
+    public MainDeFer() {
+        setNomCarte("Carte Main de fer");
+        setDescription("Tu tapes du poing sur la table et remets ton equipage dans le rang");
+        setDegats(2);
+        carteToString();
+    }
+}
+

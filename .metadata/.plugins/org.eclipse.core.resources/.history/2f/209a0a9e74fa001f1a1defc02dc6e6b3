@@ -1,0 +1,12 @@
+package pirates;
+
+public class CarteCoupDeSabre extends Carte {
+	private int nbDegats =4;
+	private int populariteDeCarte = 2
+	
+	public CarteCoupDeSabre() {
+		setNomCarte("Carte coup de sabre");
+		setDescription("Muni de ton fameux sabre, tu assènes un coup digne de ta légende à ton adversaire");
+		carteToString();
+	}
+}

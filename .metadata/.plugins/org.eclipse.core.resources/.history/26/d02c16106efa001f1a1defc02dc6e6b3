@@ -1,0 +1,16 @@
+package pirates;
+
+public class CarteAbordage extends CarteAttaque {
+
+    public CarteAbordage() {
+        setNomCarte("Carte abordage");
+        setDescription("Ton équipage et toi abordez le navire adverse");
+        carteToString();
+    }
+
+    @Override
+    public String carteToString() {
+        String affichageCarte = getNomCarte() + "\n" + donnerDescription() + "\n" + "Valeur attaque = " + String.valueOf(getDegats()) +"\n";
+        return affichageCarte;
+    }
+}

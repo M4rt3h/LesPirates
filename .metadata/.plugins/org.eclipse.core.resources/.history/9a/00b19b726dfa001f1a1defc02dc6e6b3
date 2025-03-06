@@ -1,0 +1,24 @@
+package pirates;
+
+public abstract class Carte {
+	private String description;
+	private String nomCarte;
+	
+	protected String getNomCarte() {
+		return nomCarte;
+	}
+	protected void setDescription(String description) {
+		this.description = description;
+	}
+	protected void setNomCarte(String nomCarte) {
+		this.nomCarte = nomCarte;
+	}
+	protected String donnerDescription() {
+		return description;
+	}
+	
+	public abstract String decrireCarte();
+	
+	public abstract String carteToString();
+	
+}

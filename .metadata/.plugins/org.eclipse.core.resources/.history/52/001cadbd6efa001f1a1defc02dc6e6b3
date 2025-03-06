@@ -1,0 +1,15 @@
+package pirates;
+
+public class MainDeFer extends CarteAttaque {
+
+    public CarteAbordage() {
+        setNomCarte("Carte abordage");
+        setDescription("Ton équipage et toi abordez le navire adverse");
+        setDegats(2);
+        carteToString();
+    }
+}package pirates;
+
+public class MainDeFer {
+
+}

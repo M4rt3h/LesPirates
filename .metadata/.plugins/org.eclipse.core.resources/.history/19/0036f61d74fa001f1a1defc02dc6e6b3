@@ -1,0 +1,16 @@
+package pirates;
+
+public class CarteVolerCarte extends Carte {
+
+	public CarteVolerCarte() {
+		setNomCarte("Voler une carte");
+		setDescription("Tu peux voler une carte de ton adversaire mais attention ..." + "\n...à l'aveugle");
+		carteToString();
+	}
+
+	@Override
+	public String carteToString() {
+		return nomCarte + "\n" + description;
+	}
+
+}

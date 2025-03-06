@@ -1,0 +1,20 @@
+package pirates;
+
+public class CarteVolerCarte extends Carte {
+
+	public CarteVolerCarte() {
+		setNomCarte("Voler une carte");
+		setDescription("Ton équipage et toi abordez le navire adverse");
+		setDegats(2);
+		carteToString();
+	}
+	
+	
+	
+	@Override
+	public String carteToString() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

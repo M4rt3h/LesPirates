@@ -1,0 +1,11 @@
+package pirates;
+
+public class CarteCoupDeSabre extends CarteAttaque {
+
+	public CarteCoupDeSabre() {
+		setNomCarte("Carte coup de sabre");
+		setDescription("Ton équipage et toi abordez le navire adverse");
+		setDegats(2);
+		carteToString();
+	}
+}

@@ -1,0 +1,9 @@
+package pirates;
+
+public class Jeu {
+	Affichage afficheur = new Affichage();
+
+	public void jouer() {
+		afficheur.
+	}
+}

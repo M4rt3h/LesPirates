@@ -1,0 +1,12 @@
+package pirates;
+
+public class CarteRegenHP extends CarteRegen{
+	
+	public CarteRegenHP() {
+		setDescription("Tu bois du rhum dans le crâne d'un de tes défunts ennemi");
+		setNomCarte("Regeneration de vie");
+		
+		
+	}
+
+}

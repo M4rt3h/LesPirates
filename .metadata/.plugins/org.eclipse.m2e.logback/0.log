@@ -7,3 +7,4 @@
 2025-02-20 10:03:08,530 [ForkJoinPool.commonPool-worker-1] INFO  j.exodus.gc.GarbageCollector - Queueing ComputeUtilizationFromScratchJob
 2025-02-20 10:03:18,344 [Exodus shared background cleaner] INFO  j.exodus.gc.GarbageCollector - Started calculation of log utilization from scratch at C:\Users\ltm4226a\.sonarlint\xodus-local-only-issue-store3826372480047748440
 2025-02-20 10:03:18,353 [Exodus shared background cleaner] INFO  j.exodus.gc.GarbageCollector - Finished calculation of log utilization from scratch at C:\Users\ltm4226a\.sonarlint\xodus-local-only-issue-store3826372480047748440
+2025-02-20 12:11:03,275 [ForkJoinPool.commonPool-worker-52] INFO  j.exodus.util.CompressBackupUtil - Backup file "local_only_issue_backup2025-02-20-12-11-03.tar.gz" created.

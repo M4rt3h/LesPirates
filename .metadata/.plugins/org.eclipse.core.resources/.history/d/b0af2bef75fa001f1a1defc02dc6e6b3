@@ -1,0 +1,9 @@
+package pirates;
+
+private boolean preparerJeu
+
+public class Jeu {
+	Affichage afficheur = new Affichage();
+
+
+}

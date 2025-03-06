@@ -1,0 +1,20 @@
+package pirates;
+
+public class CartePopularite extends Carte{
+	private int popularite;
+	
+	public int getValeurPop() { //recupere la valeur de la popularite
+		return popularite;
+	}
+
+	protected void setPop(int pop) {
+		popularite = pop;
+	}
+	
+
+	@Override
+	public String carteToString() {
+		String affichageCarte = getNomCarte() + "\n" + "Valeur popularite = " + String.valueOf(getValeurPop()) +"\n";
+		return affichageCarte;
+	}
+}

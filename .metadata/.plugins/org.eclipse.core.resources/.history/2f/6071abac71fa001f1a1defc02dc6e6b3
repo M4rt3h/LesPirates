@@ -1,0 +1,18 @@
+package pirates;
+
+public class CarteAttaque extends Carte{
+	private int nbDegats;
+	private String nomCarte = "Carte attaque simple";
+
+	protected void setDegats(int degats) {
+		nbDegats = degats;
+	}
+	
+
+	
+	@Override
+	public String carteToString() {
+		String affichageCarte = nomCarte + "\n" + "Valeur attaque = " + String.valueOf(nbDegats) +"\n";
+		return affichageCarte;
+	}
+}

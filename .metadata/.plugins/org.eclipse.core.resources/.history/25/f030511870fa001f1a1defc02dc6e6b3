@@ -1,0 +1,9 @@
+package pirates;
+
+public class CarteRegenHP extends Carte{
+	
+	public CarteRegenHP() {
+		setNom("Tu bois du rhum dans le crâne d'un de tes défunts ennemi")
+	}
+
+}

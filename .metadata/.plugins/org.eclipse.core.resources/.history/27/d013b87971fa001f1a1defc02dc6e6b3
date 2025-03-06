@@ -1,0 +1,24 @@
+package pirates;
+
+public class CarteRegenHP extends Carte {
+
+	int regen = 2;
+
+	private int getRegen() {
+		return regen;
+
+	}
+
+	public CarteRegenHP() {
+		setDescription("Tu bois du rhum dans le crâne de l'ancien capitaine");
+		setNomCarte("Regeneration de vie");
+
+	}
+
+	@Override
+	public String carteToString() {
+		String affichageCarte = nomCarte + "\n" + "Tu récupères " + String.valueOf(getRegen()) + " PV\n";
+		return affichageCarte;
+	}
+
+}

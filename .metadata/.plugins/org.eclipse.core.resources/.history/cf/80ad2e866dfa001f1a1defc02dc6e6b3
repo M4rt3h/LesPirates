@@ -1,0 +1,14 @@
+package pirates;
+
+public class CarteAbordage extends CarteAttaque {
+	
+	setNomCarte("Carte abordage");
+	setDescription("Ton équipage et toi abordez le navire adverse")
+
+	@Override
+	public String carteToString() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

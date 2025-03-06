@@ -1,0 +1,17 @@
+
+^	java:S106"+Replace this use of System.out by a logger.b bb1c3f2ea781263d3a2bb92b06a2061fh
+^	java:S106"+Replace this use of System.out by a logger.b bb1c3f2ea781263d3a2bb92b06a2061fh
+^	java:S106"+Replace this use of System.out by a logger.b bb1c3f2ea781263d3a2bb92b06a2061fh
+^	java:S106 "+Replace this use of System.out by a logger.b bb1c3f2ea781263d3a2bb92b06a2061fh
+e	java:S106""+Replace this use of System.out by a logger.8ûïßï“2b bb1c3f2ea781263d3a2bb92b06a2061fh
+l
+java:S1153"1Directly append the argument of String.valueOf().8ßë∞ï“2b 48f7ab07740dfa0ab3e137d593daeb61h
+e	java:S106."+Replace this use of System.out by a logger.8¿‚ˆï“2b bb1c3f2ea781263d3a2bb92b06a2061fh
+ú
+java:S1488"aImmediately return this expression instead of assigning it to the temporary variable "nomJoueur".8Øòçó“2b 94e31551ea5202148ada33596f2f74d6h
+v	java:S125J"<This block of commented-out lines of code should be removed.8À¢Œó“2b 9d99ee14340de585ead1fcc8dfa349d6h
+e	java:S1062"+Replace this use of System.out by a logger.8óŒÅò“2b bb1c3f2ea781263d3a2bb92b06a2061fh
+t
+java:S1854R"9Remove this useless assignment to local variable "choix".8∫Öò“2b cc6ad6aa76e6ad360194c546bbfcc069h
+e
+java:S1481R"*Remove this unused "choix" local variable.8∫Öò“2b 420e2db6e4b932c670d94e93f63e4fa6h
