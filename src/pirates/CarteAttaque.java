@@ -2,19 +2,18 @@ package pirates;
 
 public class CarteAttaque extends Carte{
 	private int nbDegats;
-	
-	public int getDegats() {
-		return nbDegats;
+
+	protected void setDegats(int degats) {
+		nbDegats = degats;
 	}
 	
-	@Override
-	public String decrireCarte() {
-		return "C'est une carte d'attaque";
+	public CarteAttaque() {
+		setNomCarte("Carte attaque simple");
 	}
+
 	
 	@Override
 	public String carteToString() {
-		String affichageCarte = getNomCarte() + "\n" + "Valeur attaque = " + String.valueOf(getDegats()) +"\n";
-		return affichageCarte;
+		return nomCarte +"\n"+ description + "\n" + "Valeur attaque = " + String.valueOf(nbDegats) +"\n";
 	}
 }
