@@ -4,7 +4,7 @@ public abstract class Carte {
 	protected String description;
 	protected String nomCarte;
 
-	protected String getNomCarte() {
+	public String getNomCarte() {
 		return nomCarte;
 	}
 
@@ -21,5 +21,8 @@ public abstract class Carte {
 	}
 
 	public abstract String carteToString();
+
+	public abstract void joueurUtiliserCarte(Personnage joueurCourant, Personnage joueurAdverse);
+
 
 }

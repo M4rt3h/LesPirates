@@ -5,14 +5,19 @@ public class CarteRegeneration extends Carte {
 	int regen = 2;
 
 	public CarteRegeneration() {
-		setDescription("Tu bois du rhum dans le crâne de l'ancien capitaine");
+		setDescription("Tu bois du rhum dans le crï¿½ne de l'ancien capitaine");
 		setNomCarte("Regeneration de vie");
 
 	}
 
 	@Override
 	public String carteToString() {
-		return nomCarte + "\n" + description + "\n" + "Tu récupères " + String.valueOf(regen) + " PV\n";
+		return nomCarte + "\n" + description + "\n" + "Tu rï¿½cupï¿½res " + String.valueOf(regen) + " PV\n";
 	}
 
+	@Override
+	public void joueurUtiliserCarte(Personnage joueurCourant, Personnage joueurAdverse) {
+		joueurCourant.modifVie(5 - joueurCourant.getPV());
+
+	}
 }

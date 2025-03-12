@@ -1,5 +1,7 @@
 package pirates;
 
+import java.util.Scanner;
+
 import java.util.Random;
 
 public class Jeu {
@@ -8,6 +10,7 @@ public class Jeu {
 	private Affichage affichage;
 	private int nbCartes = 60;
 	private Carte[] pioche;;
+	private Scanner scanner;
 
 	public Jeu() {
 		this.joueur1 = new Personnage("Jack le Borgne");
@@ -17,11 +20,14 @@ public class Jeu {
 		this.remplirPioche();
 
 	}
-	
+
 	public void demarrerJeu() {
-		
+        affichage.afficherMessage("Début du jeu des Pirates !");
+        
+        while (!jeuTermine()) {
+
+        
 	}
-	
 
 	private void remplirPioche() {
 		Random random = new Random();
@@ -51,6 +57,23 @@ public class Jeu {
 				|| joueur2.getPopularite() >= 5;
 	}
 
+	private void tourDeJeu(Personnage joueur) {
+		affichage.afficherMessage("\nTour de " + joueur.getNom());
+		affichage.afficherInfosJoueur(joueur);
+
+		joueur.ajouterCarte(piocherCarte());
+
+		affichage.afficherMessage("Choisissez une carte parmis les suivantes :");
+		affichage.afficherMain(joueur);
+		
+		int choix = scanner.nextInt();
+
+		if (choix == 1) {
+			joueur.utiliserCarte(); // Méthode à implémenter dans Personnage
+		}
+		
+	}
+
 	public Personnage choisirPremierJoueur(Personnage pirateBill, Personnage pirateJack) {
 		Random random = new Random();
 		int randomNumber = random.nextInt(2);
@@ -59,10 +82,5 @@ public class Jeu {
 		} else {
 			return pirateJack;
 		}
-	}
-
-	public void lancerJeu() {
-		// Code pour initialiser et lancer le jeu
-		// ...
 	}
 }

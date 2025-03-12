@@ -1,7 +1,7 @@
 package pirates;
 
 public class CartePopularite extends Carte {
-	private int populariteDeCarte;
+	private int populariteDeCarte = 1;
 
 
 	protected void setPop(int pop) {
@@ -10,6 +10,10 @@ public class CartePopularite extends Carte {
 
 	@Override
 	public String carteToString() {
-		return nomCarte + "\n" + description + "\n" + "La carte fait gagner/perdre "+String.valueOf(populariteDeCarte) +" popularite = " + "\n";
+		return nomCarte + "\n" + description + "\n" + "La carte fait ajoute "+String.valueOf(populariteDeCarte) +" de popularite = " + "\n";
+	}
+	@Override
+	public void joueurUtiliserCarte(Personnage joueurCourant, Personnage joueurAdverse) {
+		joueurCourant.modifPopularite(populariteDeCarte);
 	}
 }

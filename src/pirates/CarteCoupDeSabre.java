@@ -1,17 +1,23 @@
 package pirates;
 
 public class CarteCoupDeSabre extends Carte {
-	private int nbDegats = 4;
+	private int nbDegats = -4;
 	private int populariteDeCarte = 2;
 
 	public CarteCoupDeSabre() {
 		setNomCarte("Carte coup de sabre");
-		setDescription("Muni de ton fameux sabre, tu assènes un coup digne de ta légende à ton adversaire");
+		setDescription("Muni de ton fameux sabre, tu assï¿½nes un coup digne de ta lï¿½gende ï¿½ ton adversaire");
 		carteToString();
 	}
 
 	@Override
 	public String carteToString() {
 		return nomCarte +"\n"+ description + "\n" + "Valeur attaque = " + String.valueOf(nbDegats) +"\n"+ "Regain de " + String.valueOf(populariteDeCarte) +" de popularite\n";
+	}
+
+	@Override
+	public void joueurUtiliserCarte(Personnage joueurCourant, Personnage joueurAdverse) {
+		joueurCourant.modifPopularite(populariteDeCarte);
+		joueurAdverse.modifVie(nbDegats);
 	}
 }

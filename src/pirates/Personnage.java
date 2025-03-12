@@ -7,11 +7,10 @@ public class Personnage {
 	private int nbPopularite = 0;
 	private Carte[] laMain = new Carte[4];
 
-	
-    public Personnage(String nom) {
-        this.nom = nom;
-    }
-    
+	public Personnage(String nom) {
+		this.nom = nom;
+	}
+
 	public int getPopularite() {
 		return nbPopularite;
 	}
@@ -28,30 +27,19 @@ public class Personnage {
 		return laMain[numeroCarte];
 	}
 
-	// public boolean setCarte() a voir si besoin de rajouter puisqu'il y a
-	// ajouterCarte
-
-	public void perdreVie(int pvPerdu) {
-		if (nbPV - pvPerdu <= 0) {
+	public void modifVie(int pvPerdu) {
+		if (nbPV + pvPerdu <= 0) {
 			nbPV = 0;
 		} else {
-			nbPV -= pvPerdu;
+			nbPV += pvPerdu;
 		}
 	}
 
-	public void gagnerVie(int pvGagnes) {
-		nbPV += pvGagnes;
-	}
-
-	public void gagnerPopularite(int popGagne) {
-		nbPopularite += popGagne;
-	}
-
-	public void perdrePopularite(int popPerdu) {
-		if (nbPopularite - popPerdu <= 0) {
+	public void modifPopularite(int popPerdu) {
+		if (nbPopularite + popPerdu <= 0) {
 			nbPopularite = 0;
 		} else {
-			nbPopularite -= popPerdu;
+			nbPopularite += popPerdu;
 		}
 	}
 
@@ -74,6 +62,24 @@ public class Personnage {
 		return estAjoute;
 	}
 
+	public void utiliserCarte(int indiceCarte, Personnage joueurCourant, Personnage joueurAdverse) {
+		if (laMain.length == 0) {
+			System.out.println(nom + " n’a aucune carte à utiliser !");
+			return;
+		}
+
+		String Nomcarte = laMain[indiceCarte].getNomCarte();
+		Carte laCarte = laMain[indiceCarte];
+		// String carte = laMain.remove(0);
+		System.out.println(nom + " utilise la carte : " + Nomcarte);
+
+		laCarte.joueurUtiliserCarte(joueurCourant, joueurAdverse);
+
+		enleverCarte(indiceCarte);
+		if (pv < 0)
+			pv = 0; // Empêcher les PV négatifs
+	}
+
 	public boolean enleverCarte(int indiceCarte) {
 		boolean estRetire = false;
 		if (laMain[indiceCarte] != null) {
@@ -83,8 +89,6 @@ public class Personnage {
 		return estRetire;
 
 	}
-
-
 
 	public String getMain() {
 		StringBuilder laMainDuJoueur = new StringBuilder();

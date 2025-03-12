@@ -8,4 +8,9 @@ public class CarteMainDeFer extends CartePopularite {
 		setPop(-1);
 		carteToString();
 	}
+
+	@Override
+	public void joueurUtiliserCarte(Personnage joueurCourant, Personnage joueurAdverse) {
+		joueurCourant.modifPopularite(-1);
+	}
 }

@@ -8,4 +8,9 @@ public class CarteAbordage extends CarteAttaque {
 		setDegats(2);
 		carteToString();
 	}
+
+	@Override
+	public void joueurUtiliserCarte(Personnage joueurCourant, Personnage joueurAdverse) {
+		joueurAdverse.modifVie(nbDegats);
+	}
 }
