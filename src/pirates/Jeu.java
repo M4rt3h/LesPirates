@@ -12,11 +12,13 @@ public class Jeu {
 	}
 
 	private void remplirPioche() {
-		TypesCarte[] TypesDeCartes = TypesCarte.values();
-		int indexAleatoire;
-		for (int i = 0; i < 60; i++) {
-			indexAleatoire = Random.nextInt(TypesDeCartes.length);
-			pioche[i] = TypesDeCartes[indexAleatoire];
+		Random random = new Random(); // Pour générer des indices aléatoires
+		TypesCarte[] typesDeCartes = TypesCarte.values(); // Récupère toutes les valeurs de l'enum
+
+		for (int i = 0; i < 60; i++) { //Ue pioche de 60 cartes 
+			int indexAleatoire = random.nextInt(typesDeCartes.length);
+			Carte carte = typesDeCartes[indexAleatoire].getCarte();
+			ajouterCarte(carte); // Ajouter la carte à la pioche
 		}
 	}
 
