@@ -6,14 +6,14 @@ public class CarteCoupDeSabat extends Carte {
 
 	public CarteCoupDeSabat() {
 		setNomCarte("Carte coup de sabat");
-		setDescription("Tu donnes un coup de jambes de bois à ton adversaire mais tu glisses et tombe...");
+		setDescription("Tu donnes un coup de jambes de bois à ton adversaire mais tu glisses et tombes...");
 
 	}
 
 	@Override
 	public String carteToString() {
 		return nomCarte + "\n" + description + "\n" + "L'adversaire perd " + String.valueOf(-nbDegats)
-				+ " PV\nTu perds " + String.valueOf(-nbPop) + "de popularite\n";
+				+ " PV\nTu perds " + String.valueOf(-nbPop) + " de popularite\n";
 	}
 
 	@Override

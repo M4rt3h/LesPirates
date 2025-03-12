@@ -5,7 +5,7 @@ public class CarteMendiant extends CartePopularite{
 	private int populariteDeCarte = -2;
 
 	public CarteMendiant() {
-		setNomCarte("Carte Collier");
+		setNomCarte("Carte Mendiant");
 		setDescription("Tu jettes une pièce à ton adversaire");
 		carteToString();
 	}
