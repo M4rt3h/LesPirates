@@ -9,14 +9,17 @@ public class Jeu {
 	private Personnage joueur2;
 	private Affichage affichage;
 	private int nbCartes = 0;
-	private Carte[] pioche;;
+	private Carte[] pioche;
 	private Scanner scanner;
+	
+
 
 	public Jeu() {
 		this.joueur1 = new Personnage("Jack le Borgne");
 		this.joueur2 = new Personnage("Bill Jambe-de-Bois");
 		this.affichage = new Affichage();
 		this.pioche = new Carte[60];
+		this.scanner = new Scanner(System.in);
 		this.remplirPioche();
 
 	}
