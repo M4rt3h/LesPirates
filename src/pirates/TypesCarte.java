@@ -7,7 +7,12 @@ public enum TypesCarte {
 	MAINDEFER(new CarteMainDeFer()),
 	POPULARITE(new CartePopularite()),
 	REGENERATION(new CarteRegeneration()),
-	VOL(new CarteVol())
+	VOL(new CarteVol()),
+	PERROQUET(new CartePerroquet()),
+	COLLIER(new CarteCollier()),
+	MENDIANT(new CarteMendiant()),
+	KRAKEN(new CarteKraken()),
+	SABAT(new CarteCoupDeSabat())
     ;
 
     private final Carte carte;

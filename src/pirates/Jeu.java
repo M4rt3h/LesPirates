@@ -106,15 +106,16 @@ public class Jeu {
 
 	}
 
-	public Personnage choisirPremierJoueur(Personnage pirateBill, Personnage pirateJack) {
-		Random random = new Random();
-		int randomNumber = random.nextInt(2);
-		if (randomNumber == 0) {
-			return pirateBill;
-		} else {
-			return pirateJack;
-		}
-	}
+	// Je sais pas comment l'implémenter je verrais plus tard
+	// public Personnage choisirPremierJoueur(Personnage pirateBill, Personnage
+	// pirateJack) {
+	// int randomNumber = (int) (Math.random() * 2);
+	// if (randomNumber == 0) {
+	// return pirateBill;
+	// } else {
+	// return pirateJack;
+	// }
+	// }
 
 	public static void main(String[] args) {
 		Jeu jeu = new Jeu();
