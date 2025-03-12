@@ -1,8 +1,8 @@
 package pirates;
 
-public class CarteVole extends Carte {
+public class CarteVol extends Carte {
 
-	public CarteVole() {
+	public CarteVol() {
 		setNomCarte("Voler une carte");
 		setDescription("Tu peux voler une carte de ton adversaire mais attention ..." + "\n...au hasard");
 		carteToString();
