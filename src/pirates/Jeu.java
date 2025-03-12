@@ -1,21 +1,21 @@
 package pirates;
 
-import java.util.Random; //Pour ajouter des cartes de maniere aléatoire dans la pioche
+import java.util.Random;
 
 public class Jeu {
-	private int nbCartes = 0;
-	private Carte[] pioche = new Carte[60]; // Ajout de la pioche
+	private int nbCartes = 60;
+	private Carte[] pioche;;
 
 	public Jeu() {
-		this.pioche = new Carte[100]; // Initialisation de la pioche avec une taille maximale
-		this.remplirPioche(); // Remplir la pioche au début du jeu
+		this.pioche = new Carte[60];
+		this.remplirPioche();
 	}
 
 	private void remplirPioche() {
-		Random random = new Random(); // Pour générer des indices aléatoires
-		TypesCarte[] typesDeCartes = TypesCarte.values(); // Récupère toutes les valeurs de l'enum
+		Random random = new Random();
+		TypesCarte[] typesDeCartes = TypesCarte.values();
 
-		for (int i = 0; i < 60; i++) { //Ue pioche de 60 cartes 
+		for (int i = 0; i < 60; i++) {
 			int indexAleatoire = random.nextInt(typesDeCartes.length);
 			Carte carte = typesDeCartes[indexAleatoire].getCarte();
 			ajouterCarte(carte); // Ajouter la carte à la pioche
@@ -36,9 +36,15 @@ public class Jeu {
 		pioche[nbCartes++] = carte; // Ajoute la carte à la fin de la pioche et incrémente le compteur
 	}
 
-	public Pirate choisirPremierJoueur(Pirate pirateBill, Pirate pirateJack) {
-		// Code pour déterminer aléatoirement quel pirate commence
-		// ...
+	public Personnage choisirPremierJoueur(Personnage pirateBill, Personnage pirateJack) {
+		Random random = new Random();
+		int randomNumber = random.nextInt(2);
+		if (randomNumber == 0) {
+			return pirateBill;
+		}
+		else {
+			return pirateJack;
+		}
 	}
 
 	public void lancerJeu() {
