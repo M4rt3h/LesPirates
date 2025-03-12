@@ -59,6 +59,7 @@ public class Personnage {
 			if (laMain[i] == null) {
 				laMain[i] = laCarte;
 				estAjoute = true;
+				break; //Pour ne pas ajouter indéfiniment la meme carte...
 			}
 		}
 		return estAjoute;
@@ -78,7 +79,7 @@ public class Personnage {
 		Carte laCarte = laMain[indiceCarte];
 		joueurCourant.enleverCarte(indiceCarte);
 		// String carte = laMain.remove(0);
-		affichage.afficherMessage(nom + " utilise la carte : " + Nomcarte);
+		affichage.afficherMessage(nom + " utilise la carte : " + Nomcarte + "\n");
 		
 		laCarte.joueurUtiliserCarte(joueurCourant, joueurAdverse);
 

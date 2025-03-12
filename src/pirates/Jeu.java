@@ -25,8 +25,7 @@ public class Jeu {
 	}
 
 	public void demarrerJeu() {
-		affichage.afficherMessage("Début du jeu des Pirates !");
-
+		affichage.afficherMessage("\n╔════════════════════════════════════════════╗\n║                                            ║\n║          Début du jeu des Pirates !        ║\n║                                            ║\n╚════════════════════════════════════════════╝\n");
 		while (!jeuTermine()) {
 
 			tourDeJeu(joueur1);
@@ -79,12 +78,14 @@ public class Jeu {
 	}
 
 	private void tourDeJeu(Personnage joueur) {
-		affichage.afficherMessage("\nTour de " + joueur.getNom());
+		affichage.afficherMessage("=================================================");
+		affichage.afficherMessage("Tour de " + joueur.getNom());
+		affichage.afficherMessage("=================================================");
 		affichage.afficherInfosJoueur(joueur);
 
 		joueur.ajouterCarte(piocherCarte());
 
-		affichage.afficherMessage("Choisissez une carte parmis les suivantes :");
+		affichage.afficherMessage("Choisissez une carte parmis les suivantes :\n");
 		affichage.afficherMain(joueur);
 
 		int choix = scanner.nextInt();

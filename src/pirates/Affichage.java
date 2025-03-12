@@ -7,12 +7,12 @@ public class Affichage implements IAffichage {
 
 	@Override
 	public void afficherMain(Personnage joueur) {
-		System.out.println("Main de " + joueur.getNom() + " : " + joueur.getMain());
+		System.out.println(joueur.getMain());
 	}
 
 	@Override
 	public void afficherInfosJoueur(Personnage joueur) {
-		System.out.println(joueur.getNom() + " - PV: " + joueur.getPV() + " - Popularité: " + joueur.getPopularite());
+		System.out.println(" \n- PV: " + joueur.getPV() + " \n- Popularité: " + joueur.getPopularite() + "\n");
 	}
 
 	@Override

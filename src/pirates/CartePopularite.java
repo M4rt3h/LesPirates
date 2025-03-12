@@ -10,7 +10,7 @@ public class CartePopularite extends Carte {
 
 	@Override
 	public String carteToString() {
-		return nomCarte + "\n" + description + "\n" + "La carte fait ajoute "+String.valueOf(populariteDeCarte) +" de popularite = " + "\n";
+		return nomCarte + "\n" + description + "\n" + "La carte ajoute "+String.valueOf(populariteDeCarte) +" de popularite" + "\n";
 	}
 	@Override
 	public void joueurUtiliserCarte(Personnage joueurCourant, Personnage joueurAdverse) {

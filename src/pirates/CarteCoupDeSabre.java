@@ -6,7 +6,7 @@ public class CarteCoupDeSabre extends Carte {
 
 	public CarteCoupDeSabre() {
 		setNomCarte("Carte coup de sabre");
-		setDescription("Muni de ton fameux sabre, tu ass�nes un coup digne de ta l�gende � ton adversaire");
+		setDescription("Muni de ton fameux sabre, tu assenes un coup digne de ta legende a ton adversaire");
 		carteToString();
 	}
 
