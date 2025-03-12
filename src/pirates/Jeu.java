@@ -8,7 +8,7 @@ public class Jeu {
 	private Personnage joueur1;
 	private Personnage joueur2;
 	private Affichage affichage;
-	private int nbCartes = 60;
+	private int nbCartes = 0;
 	private Carte[] pioche;;
 	private Scanner scanner;
 
@@ -22,13 +22,31 @@ public class Jeu {
 	}
 
 	public void demarrerJeu() {
-        affichage.afficherMessage("Début du jeu des Pirates !");
-        
-        while (!jeuTermine()) {
+		affichage.afficherMessage("Début du jeu des Pirates !");
 
-        
+		while (!jeuTermine()) {
+
+			tourDeJeu(joueur1);
+
+			tourDeJeu(joueur2);
+		}
+
+		afficherResultat();
+
 	}
 
+    private void afficherResultat() {
+        if (joueur1.getPV() <= 0) {
+            affichage.afficherMessage("Bill Jambe-de-Bois remporte la partie !");
+        } else if (joueur2.getPV() <= 0) {
+            affichage.afficherMessage("Jack le Borgne remporte la partie !");
+        } else if (joueur1.getPopularite() >= 5) {
+            affichage.afficherMessage("Jack le Borgne devient capitaine !");
+        } else if (joueur2.getPopularite() >= 5) {
+            affichage.afficherMessage("Bill Jambe-de-Bois devient capitaine !");
+        }
+    }
+	
 	private void remplirPioche() {
 		Random random = new Random();
 		TypesCarte[] typesDeCartes = TypesCarte.values();
@@ -65,19 +83,17 @@ public class Jeu {
 
 		affichage.afficherMessage("Choisissez une carte parmis les suivantes :");
 		affichage.afficherMain(joueur);
-		
+
 		int choix = scanner.nextInt();
 		Personnage joueurAdverse;
-		
+
 		if (joueur == joueur1) {
 			joueurAdverse = joueur1;
-		}
-		else {
+		} else {
 			joueurAdverse = joueur2;
 		}
-		joueur.utiliserCarte(choix, joueur, ); // Méthode à implémenter dans Personnage
-		
-		
+		joueur.utiliserCarte(choix, joueur, joueurAdverse); // Méthode à implémenter dans Personnage
+
 	}
 
 	public Personnage choisirPremierJoueur(Personnage pirateBill, Personnage pirateJack) {
@@ -89,4 +105,9 @@ public class Jeu {
 			return pirateJack;
 		}
 	}
+	
+    public static void main(String[] args) {
+        Jeu jeu = new Jeu();
+        jeu.demarrerJeu();
+    }
 }
