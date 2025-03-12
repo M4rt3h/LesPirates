@@ -12,4 +12,8 @@ public class Affichage implements IAffichage {
         System.out.println(joueur.getNom() + " - PV: " + joueur.getPV() + " - Popularité: " + joueur.getPopularite());
     }
 
+    @Override
+    public void afficherMessage(String message) {
+        System.out.println(message);
+    }
 }
