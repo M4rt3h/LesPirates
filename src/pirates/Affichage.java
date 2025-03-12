@@ -1,19 +1,34 @@
 package pirates;
 
-public class Affichage implements IAffichage {
-    
-    @Override
-    public void afficherMain(Personnage joueur) {
-        System.out.println("Main de " + joueur.getNom() + " : " + joueur.getMain());
-    }
-    
-    @Override
-    public void afficherInfosJoueur(Personnage joueur) {
-        System.out.println(joueur.getNom() + " - PV: " + joueur.getPV() + " - Popularité: " + joueur.getPopularite());
-    }
+import java.util.Scanner;
 
-    @Override
-    public void afficherMessage(String message) {
-        System.out.println(message);
-    }
+public class Affichage implements IAffichage {
+	private Scanner scanner = new Scanner(System.in);
+
+	@Override
+	public void afficherMain(Personnage joueur) {
+		System.out.println("Main de " + joueur.getNom() + " : " + joueur.getMain());
+	}
+
+	@Override
+	public void afficherInfosJoueur(Personnage joueur) {
+		System.out.println(joueur.getNom() + " - PV: " + joueur.getPV() + " - Popularité: " + joueur.getPopularite());
+	}
+
+	@Override
+	public void afficherMessage(String message) {
+		System.out.println(message);
+	}
+
+	@Override
+	public int lireReponse() {
+	    while (!scanner.hasNextInt()) {
+	        System.out.println("Veuillez entrer un nombre valide.");
+	        scanner.next(); 
+	    }
+	    int reponse = scanner.nextInt(); // Lire l'entier valide
+	    scanner.nextLine(); 
+	    return reponse;
+	}
+
 }

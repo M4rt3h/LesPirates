@@ -67,10 +67,16 @@ public class Jeu {
 		affichage.afficherMain(joueur);
 		
 		int choix = scanner.nextInt();
-
-		if (choix == 1) {
-			joueur.utiliserCarte(); // Méthode à implémenter dans Personnage
+		Personnage joueurAdverse;
+		
+		if (joueur == joueur1) {
+			joueurAdverse = joueur1;
 		}
+		else {
+			joueurAdverse = joueur2;
+		}
+		joueur.utiliserCarte(choix, joueur, ); // Méthode à implémenter dans Personnage
+		
 		
 	}
 

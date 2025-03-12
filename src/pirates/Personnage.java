@@ -2,6 +2,8 @@ package pirates;
 
 public class Personnage {
 
+	Affichage affichage = new Affichage();
+
 	private String nom;
 	private int nbPV = 5;
 	private int nbPopularite = 0;
@@ -62,22 +64,27 @@ public class Personnage {
 		return estAjoute;
 	}
 
+	public void definirCarte(int indice, Carte laCarte) {
+		laMain[indice] = laCarte;
+	}
+
 	public void utiliserCarte(int indiceCarte, Personnage joueurCourant, Personnage joueurAdverse) {
 		if (laMain.length == 0) {
-			System.out.println(nom + " n’a aucune carte à utiliser !");
+			affichage.afficherMessage(nom + " n’a aucune carte à utiliser !");
 			return;
 		}
 
 		String Nomcarte = laMain[indiceCarte].getNomCarte();
 		Carte laCarte = laMain[indiceCarte];
+		joueurCourant.enleverCarte(indiceCarte);
 		// String carte = laMain.remove(0);
-		System.out.println(nom + " utilise la carte : " + Nomcarte);
-
+		affichage.afficherMessage(nom + " utilise la carte : " + Nomcarte);
+		
 		laCarte.joueurUtiliserCarte(joueurCourant, joueurAdverse);
 
 		enleverCarte(indiceCarte);
-		if (pv < 0)
-			pv = 0; // Empêcher les PV négatifs
+		if (nbPV < 0)
+			nbPV = 0; // Empêcher les PV négatifs
 	}
 
 	public boolean enleverCarte(int indiceCarte) {
