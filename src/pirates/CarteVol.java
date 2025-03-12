@@ -4,7 +4,7 @@ public class CarteVol extends Carte {
 
 	public CarteVol() {
 		setNomCarte("Voler une carte");
-		setDescription("Tu peux voler une carte de ton choix a adversaire");
+		setDescription("Tu peux voler une carte de ton choix a ton adversaire\n");
 		carteToString();
 	}
 

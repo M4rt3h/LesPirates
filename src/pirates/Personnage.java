@@ -7,7 +7,7 @@ public class Personnage {
 	private String nom;
 	private int nbPV = 5;
 	private int nbPopularite = 0;
-	private Carte[] laMain = new Carte[4];
+	private Carte[] laMain = new Carte[5];
 
 	public Personnage(String nom) {
 		this.nom = nom;

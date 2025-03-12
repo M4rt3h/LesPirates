@@ -9,11 +9,13 @@ public class CarteAttaque extends Carte {
 
 	public CarteAttaque() {
 		setNomCarte("Carte attaque simple");
+		setDescription("Tu jettes un cailloux sur ton adversaire...");
+
 	}
 
 	@Override
 	public String carteToString() {
-		return nomCarte + "\n" + description + "\n" + "Valeur attaque = " + String.valueOf(nbDegats) + "\n";
+		return nomCarte + "\n" + description + "\n" + "L'adversaire perd " + String.valueOf(-nbDegats) + " PV\n";
 	}
 
 	@Override

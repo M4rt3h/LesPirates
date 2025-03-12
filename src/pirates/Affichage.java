@@ -28,7 +28,7 @@ public class Affichage implements IAffichage {
 	    }
 	    int reponse = scanner.nextInt(); // Lire l'entier valide
 	    scanner.nextLine(); 
-	    return reponse;
+	    return reponse-1;
 	}
 
 }

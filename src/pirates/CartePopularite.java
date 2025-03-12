@@ -4,6 +4,12 @@ public class CartePopularite extends Carte {
 	private int populariteDeCarte = 1;
 
 
+	public CartePopularite() {
+		setNomCarte("Carte popularite bannale");
+		setDescription("Tu souris à ton équipage");
+		carteToString();
+	}
+	
 	protected void setPop(int pop) {
 		populariteDeCarte = pop;
 	}
