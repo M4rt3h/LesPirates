@@ -5,13 +5,23 @@ import java.util.Random;
 public class Jeu {
 	private Personnage joueur1;
 	private Personnage joueur2;
+	private Affichage affichage;
 	private int nbCartes = 60;
 	private Carte[] pioche;;
 
 	public Jeu() {
+		this.joueur1 = new Personnage("Jack le Borgne");
+		this.joueur2 = new Personnage("Bill Jambe-de-Bois");
+		this.affichage = new Affichage();
 		this.pioche = new Carte[60];
 		this.remplirPioche();
+
 	}
+	
+	public void demarrerJeu() {
+		
+	}
+	
 
 	private void remplirPioche() {
 		Random random = new Random();
@@ -36,7 +46,7 @@ public class Jeu {
 		pioche[nbCartes++] = carte; // Ajoute la carte à la fin de la pioche et incrémente le compteur
 	}
 
-	private boolean jeuTerminé() {
+	private boolean jeuTermine() {
 		return joueur1.getPV() <= 0 || joueur2.getPV() <= 0 || joueur1.getPopularite() >= 5
 				|| joueur2.getPopularite() >= 5;
 	}

@@ -7,6 +7,11 @@ public class Personnage {
 	private int nbPopularite = 0;
 	private Carte[] laMain = new Carte[4];
 
+	
+    public Personnage(String nom) {
+        this.nom = nom;
+    }
+    
 	public int getPopularite() {
 		return nbPopularite;
 	}
