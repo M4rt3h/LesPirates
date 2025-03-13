@@ -2,18 +2,17 @@ package pirates;
 
 public class CarteKraken extends Carte {
 
-	private int populariteDeCarte = -2;
-
 	public CarteKraken() {
 		setNomCarte("Carte Kraken");
 		setDescription("Le Kraken apparait et te propose un deal");
+		setRarete("Legendaire"); // N'est pas rare
+
 		carteToString();
 	}
 
 	@Override
 	public String carteToString() {
-		return nomCarte + "\n" + description + "\n" + "l'adversaire perd " + String.valueOf(-populariteDeCarte)
-				+ " de popularite\n";
+		return nomCarte + " (" + rarete + ")\n" + description + "\n";
 	}
 
 	@Override

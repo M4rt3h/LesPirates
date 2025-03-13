@@ -5,12 +5,8 @@ public class CarteAbordage extends CarteAttaque {
 	public CarteAbordage() {
 		setNomCarte("Carte abordage");
 		setDescription("Ton equipage et toi abordez le navire adverse");
-		setDegats(-2);
+		setPointAttaqueCarte(-2);
+		setRarete("Commune");
 		carteToString();
-	}
-
-	@Override
-	public void joueurUtiliserCarte(Personnage joueurCourant, Personnage joueurAdverse) {
-		joueurAdverse.modifVie(nbDegats);
 	}
 }

@@ -5,7 +5,7 @@ import java.util.Random;
 public class Jeu {
 	private Personnage joueur1;
 	private Personnage joueur2;
-	private Affichage affichage;
+	private static IAffichage affichage;
 	private int nbCartes = 0;
 	private Carte[] pioche;
 	private String nomJoueur1 = "Jack le Borgne";
@@ -14,10 +14,17 @@ public class Jeu {
 	public Jeu() {
 		this.joueur1 = new Personnage(nomJoueur1);
 		this.joueur2 = new Personnage(nomJoueur2);
-		this.affichage = new Affichage();
 		this.pioche = new Carte[60];
 		this.remplirPioche();
 
+	}
+
+	public static IAffichage getAffichage() {
+		return affichage;
+	}
+
+	public static void setAffichage(IAffichage affichage) {
+		Jeu.affichage = affichage;
 	}
 
 	public void demarrerJeu() {
@@ -118,6 +125,8 @@ public class Jeu {
 	// }
 
 	public static void main(String[] args) {
+		IAffichage affichage = new Affichage();
+		Jeu.setAffichage(affichage);
 		Jeu jeu = new Jeu();
 		jeu.demarrerJeu();
 	}

@@ -1,25 +1,22 @@
 package pirates;
 
 public class CarteAttaque extends Carte {
-	protected int nbDegats = -1;
 
-	protected void setDegats(int degats) {
-		nbDegats = degats;
-	}
-
-	public CarteAttaque() {
-		setNomCarte("Carte attaque simple");
-		setDescription("Tu jettes un cailloux sur ton adversaire...");
-
+	public CarteAttaque(String nom, String description,int force, String rarete) {
+		setNomCarte(nom);
+		setDescription(description);
+		setPointAttaqueCarte(-force);
+		setRarete(rarete);
 	}
 
 	@Override
 	public String carteToString() {
-		return nomCarte + "\n" + description + "\n" + "L'adversaire perd " + String.valueOf(-nbDegats) + " PV\n";
+		return nomCarte + " (" + rarete + ")\n" + description + "\n" + "L'adversaire perd " + String.valueOf(-getPointAttaqueCarte())
+				+ " PV\n";
 	}
 
 	@Override
 	public void joueurUtiliserCarte(Personnage joueurCourant, Personnage joueurAdverse) {
-		joueurAdverse.modifVie(nbDegats);
+		joueurAdverse.modifVie(getPointAttaqueCarte());
 	}
 }
