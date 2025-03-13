@@ -26,9 +26,7 @@ public class CarteKraken extends Carte {
 		int choixKraken = (int) (Math.random() * 2); // 0 pour face, 1 pour pile
 		// Partie du code qui choisi aléatoirement entre 0 et 1
 		int reponse = affichage.lireReponse();
-		System.out.println(reponse); // Probleme que je comprend pas : quand je met 0 ca retourne 1 mais quand je met
-										// ca retourne 0. Donc j'ai inverser les if et else pour que ca marche
-		System.out.println(choixKraken);
+
 		if (reponse == choixKraken) {
 			affichage.afficherMessage("Kraken : Tu n'aurais pas du tenter ta chance...");
 			joueurAdverse.modifVie(-joueurAdverse.getPV());
