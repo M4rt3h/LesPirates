@@ -7,7 +7,7 @@ public enum TypesCarte {
 	MAINDEFER(new CartePopularite("Main de fer","Tu tapes du poing sur la table et remets ton equipage dans le rang",-1,"Commune",true)),
 	POPULARITE(new CartePopularite("Gain de popularite","Tu fais un bisou à ton second",1,"Commune",true)),
 	REGENERATION(new CarteRegeneration("Regeneration","Tu bois du rhum dans le crane de l'ancien capitaine",1,"Commune")),
-	VOLSIMPLE(new CarteVol("Vol", "Tu peux voler une carte de ton choix a ton adversaire\n", "Legendaire")),
+	//VOLCOMPLET(new CarteVol("Vol ", "Tu peux voler une carte de ton choix a ton adversaire\n", "Epic",1)),
 	PERROQUET(new CartePopularite("Perroquet","Ton perroquet lance une pique mordante à l’infortuné marin du navire",1,"Commune",true)),
 	COLLIER(new CartePopularite("Mettre un collier","Tu habilles ton costume de ton plus beau collier...",-2,"Commune",true)),
 	MENDIANT(new CartePopularite("Mendiant", "Tu jettes une pièce à ton adversaire",-3,"Rare",false)),
@@ -15,6 +15,9 @@ public enum TypesCarte {
 	KRAKEN2(new CarteKraken("Kraken des abysses","Ce Kraken peut te faire gagner, ou te tuer","Legendaire",2)),
 	KRAKEN3(new CarteKraken("Kraken joueur","Tu as une petite chance de t'en sortir","Rare",3)),
 	SABAT(new CartePvEtPopularite("Coup de sabat", "Tu donnes un coup de jambes de bois à ton adversaire mais tu glisses et tombes...","Commune",-2,-3)),
+	TEMPETE(new CarteTempete("Grosse tempete","Une tempête éclate, chamboulant tout !","Legendaire")),
+	VOLMOYEN(new CarteVol("Vol avec assistance","Tu peux choisir une carte mais en ne connaissant que les noms","Legendaire",2))
+	
 	
     ;
 
