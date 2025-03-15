@@ -2,12 +2,16 @@ package pirates;
 
 public class CarteRegeneration extends Carte {
 
-	int regen = 3;
+	int regen = 0;
+	private void setRegen(int regen) {
+		this.regen = regen;
+	}
 
-	public CarteRegeneration() {
-		setDescription("Tu bois du rhum dans le crane de l'ancien capitaine");
-		setNomCarte("Regeneration de vie");
-		setRarete("Rare");
+	public CarteRegeneration(String nom, String description, int force, String rarete) {
+		setDescription(description);
+		setNomCarte(nom);
+		setRegen(force);
+		setRarete(rarete);
 
 	}
 
