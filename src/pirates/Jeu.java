@@ -1,6 +1,8 @@
 package pirates;
 
 import java.util.Random;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Jeu {
 	private Personnage joueur1;
@@ -65,11 +67,47 @@ public class Jeu {
 	private void remplirPioche() {
 		Random random = new Random();
 		TypesCarte[] typesDeCartes = TypesCarte.values();
+		List<Carte> cartesCommune = new ArrayList<>();
+		List<Carte> cartesRare = new ArrayList<>();
+		List<Carte> cartesLegendaire = new ArrayList<>();
+		List<Carte> cartesEpic = new ArrayList<>();
+
+		// Séparer les cartes selon leur rareté
+		for (TypesCarte type : typesDeCartes) {
+			Carte carte = type.getCarte();
+			switch (carte.getRarete()) {
+			case "Commune":
+				cartesCommune.add(carte);
+				break;
+			case "Rare":
+				cartesRare.add(carte);
+				break;
+			case "Legendaire":
+				cartesLegendaire.add(carte);
+				break;
+			case "Epic":
+				cartesEpic.add(carte);
+				break;
+			}
+		}
 
 		for (int i = 0; i < 60; i++) {
-			int indexAleatoire = random.nextInt(typesDeCartes.length);
-			Carte carte = typesDeCartes[indexAleatoire].getCarte();
-			ajouterCarte(carte); // Ajouter la carte à la pioche
+			int tirage = random.nextInt(100); // Générer un nombre entre 0 et 99
+			Carte carteSelectionnee;
+
+			if (tirage < 50 && !cartesCommune.isEmpty()) { // 50% de chances
+				carteSelectionnee = cartesCommune.get(random.nextInt(cartesCommune.size()));
+			} else if (tirage < 80 && !cartesRare.isEmpty()) { // 30% de chances
+				carteSelectionnee = cartesRare.get(random.nextInt(cartesRare.size()));
+			} else if (tirage < 95 && !cartesEpic.isEmpty()) { // 15% de chances
+				carteSelectionnee = cartesEpic.get(random.nextInt(cartesEpic.size()));
+			} else if (!cartesLegendaire.isEmpty()) { // 5% de chances
+				carteSelectionnee = cartesLegendaire.get(random.nextInt(cartesLegendaire.size()));
+			} else { // Sécurité si une liste est vide
+				carteSelectionnee = typesDeCartes[random.nextInt(typesDeCartes.length)].getCarte();
+			}
+
+			ajouterCarte(carteSelectionnee); // Ajouter la carte à la pioche
 		}
 	}
 
