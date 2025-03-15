@@ -44,6 +44,10 @@ public class Personnage {
 			nbPopularite += popPerdu;
 		}
 	}
+	
+	public void setPopularite(int pop) {
+		this.nbPopularite = pop;
+	}
 
 	public boolean estMort() {
 		return nbPV <= 0;
