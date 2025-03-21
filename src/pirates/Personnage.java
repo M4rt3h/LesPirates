@@ -106,7 +106,7 @@ public class Personnage {
 		StringBuilder laMainDuJoueur = new StringBuilder();
 		for (int i = 0; i < laMain.length; i++) {
 			if (laMain[i] != null) {
-				laMainDuJoueur.append("Carte ").append(i + 1).append("\n").append(laMain[i].carteToString())
+				laMainDuJoueur.append("\nCarte ").append(i + 1).append("\n").append(laMain[i].carteToString())
 						.append("\n");
 			} else {
 				laMainDuJoueur.append("Carte ").append(i + 1).append("\n").append("Carte vide").append("\n");

@@ -2,6 +2,7 @@ package pirates;
 
 public class CartePopularite extends Carte {
 	private boolean surJoueurActif;
+	protected int pointPopularite;
 
 	public CartePopularite(String nom, String description, int forcePOP, String rarete, boolean surJoueurActif) {
 		setNomCarte(nom);
@@ -9,6 +10,14 @@ public class CartePopularite extends Carte {
 		setPointPopulariteCarte(forcePOP);
 		setRarete(rarete);
 		this.surJoueurActif = surJoueurActif;
+	}
+
+	protected int getPointPopulariteCarte() {
+		return pointPopularite;
+	}
+
+	protected void setPointPopulariteCarte(int ptPop) {
+		pointPopularite = ptPop;
 	}
 
 	@Override
@@ -32,8 +41,7 @@ public class CartePopularite extends Carte {
 	public void joueurUtiliserCarte(Personnage joueurCourant, Personnage joueurAdverse) {
 		if (surJoueurActif) {
 			joueurCourant.modifPopularite(getPointPopulariteCarte());
-		}
-		else {
+		} else {
 			joueurAdverse.modifPopularite(getPointPopulariteCarte());
 
 		}

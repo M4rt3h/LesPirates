@@ -1,6 +1,8 @@
 package pirates;
 
 public class CartePvEtPopularite extends Carte {
+	protected int pointAttaque;
+	protected int pointPopularite;
 
 	public CartePvEtPopularite(String nom, String description, String rarete, int forcePV, int forcePOP) {
 		setNomCarte(nom);
@@ -9,6 +11,22 @@ public class CartePvEtPopularite extends Carte {
 		setPointPopulariteCarte(forcePOP);
 		setPointAttaqueCarte(forcePV);
 
+	}
+
+	protected void setPointAttaqueCarte(int ptAttaque) {
+		pointAttaque = ptAttaque;
+	}
+
+	protected int getPointAttaqueCarte() {
+		return pointAttaque;
+	}
+
+	protected int getPointPopulariteCarte() {
+		return pointPopularite;
+	}
+
+	protected void setPointPopulariteCarte(int ptPop) {
+		pointPopularite = ptPop;
 	}
 
 	@Override
