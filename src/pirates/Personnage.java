@@ -44,17 +44,9 @@ public class Personnage {
 			nbPopularite += popPerdu;
 		}
 	}
-	
+
 	public void setPopularite(int pop) {
 		this.nbPopularite = pop;
-	}
-
-	public boolean estMort() {
-		return nbPV <= 0;
-	}
-
-	public boolean estAssezPopulaire() {
-		return nbPopularite >= 5;
 	}
 
 	public boolean ajouterCarte(Carte laCarte) {
@@ -63,7 +55,7 @@ public class Personnage {
 			if (laMain[i] == null) {
 				laMain[i] = laCarte;
 				estAjoute = true;
-				break; //Pour ne pas ajouter indéfiniment la meme carte...
+				break; // Pour ne pas ajouter indéfiniment la meme carte...
 			}
 		}
 		return estAjoute;
@@ -84,7 +76,7 @@ public class Personnage {
 		joueurCourant.enleverCarte(indiceCarte);
 		// String carte = laMain.remove(0);
 		affichage.afficherMessage(nom + " utilise la carte : " + Nomcarte + "\n");
-		
+
 		laCarte.joueurUtiliserCarte(joueurCourant, joueurAdverse);
 
 		enleverCarte(indiceCarte);

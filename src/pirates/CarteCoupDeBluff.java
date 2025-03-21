@@ -1,7 +1,6 @@
 package pirates;
 
 public class CarteCoupDeBluff extends Carte {
-	private IAffichage affichage = Jeu.getAffichage();
 
 	public CarteCoupDeBluff(String nom, String description, String rarete) {
 		this.nomCarte = nom;
